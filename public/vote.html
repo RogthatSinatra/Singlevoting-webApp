@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  <title>Mubs Polls</title>
+</head>
+<!-- Image and text -->
+<div class="fixed-top">
+<nav class="navbar navbar-inverse navbar-light bg-secondary container-fluid navbar-collapse">
+  <a class="navbar-brand" href="#" title="Back to home">
+    <img src="http://new.mubs.ac.ug/wp-content/uploads/2016/12/logo.png" width="100" height="35" class="d-inline-block align-top" alt="mubs logo">
+   <b class="text-light">i.O</b> 
+  </a>
+ <div class="dropdown">
+    <button class="btn btn-outline-white dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-user"></i> User Management
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="/profile">User Account</a></li>
+      <li><a href="/logout">Logout &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+      <li><a href="#" id="nightly" onclick="nightFunction()">NightMode      <i class="far fa-moon"></i></a></li>
+     
+</div>
+</nav>
+</div>
+<body id="bady">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <br> <br><br> <br>
+  <div class="container container-fluid">
+    <h1 id="bady3">MUBS POlls</h1>
+    <br>
+    <div id="hasVotedAlreadyErrorMsg" class="card-panel hidden" style="width: 30%">
+      <span class="alert alert-danger" role="alert">You have already voted.</span>
+    </div><br>
+    <div id="bady2"class="card">
+  <div class="card-header bg-success white" >
+    Vote for your Guild Candidate?
+  </div>
+    <form id="vote-form">
+      <p>
+        <img src="https://millicodes.files.wordpress.com/2018/03/18033070_832314296920241_7920878649060291201_n.jpg?w=150&h=150" alt="Awori EMMANUEL" class="img-thumbnail" title="Awori">
+        <input type="radio" name="os" id="awori" value="Awori">
+        <label for="awori" class="text-success stm">AWORI EMMANUEL</label>
+      </p>
+      <p>
+        <img src="https://millicodes.files.wordpress.com/2018/03/10401897_859906550749431_1313087895398221879_n.jpg?w=150&h=150" alt="Bugingo" class="img-thumbnail" title="Bugingo">
+        <input type="radio" name="os" id="bugingo" value="Bugingo">
+        <label for="bugingo" class="text-warning stm">PATRICK BUGINGO</label>
+      </p>
+      <p><img src="https://millicodes.files.wordpress.com/2018/03/1979644_641642825890867_7876356396221776893_n.jpg?w=106&h=150" alt="Yorum" class="img-thumbnail thumbnail" title="Yorum">
+        <input type="radio" name="os" id="other" value="Other">
+        <label for="other" id="someone"class="stm">Yorum</label>
+      </p>
+      <p>
+        <img src="https://millicodes.files.wordpress.com/2018/03/jojo.jpg?w=130&h=130" alt="Matovu Jorum" class="img-thumbnail" title="Jojo">
+        <input type="radio" name="os" id="jojo" value="Jojo">
+        <label for="jojo" class="text-primary stm">JOJO</label>
+      </p>
+      <input type="submit" value="Vote" onclick="mySuccess()" class="btn btn-outline-success">
+    </form>
+    <br>
+    <br>
+    
+    <h5 style="text-align: center" id="chartTitle"></h5>
+   <div id="chartContainer" style="height: 300px;width:100%"></div>
+  <div class="row" style="color: gray;">
+    <div id="tweet" class="col-sm-6" style="background-color:lavender;"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Important Assurance by Students Guild Leadership! Was once Chairman of MUK ..Council Disciplinary Committee. .Guild President Mao and Guild President Rwamushana. ..those were difficult times...as &quot;We Build for the Future. .the Great Makerere..!</p>&mdash; Patrick Okumu-Ringa (@okumuringa) <a href="https://twitter.com/okumuringa/status/964806556071153664?ref_src=twsrc%5Etfw">February 17, 2018</a></blockquote>
+     </div>
+    <div id="tweet2" class="col-sm-6" style="background-color:lavenderblush;"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I encourage all Government sponsored students who have not yet registered for this semester to do so immediately in order to be paid the balance of their LOA.</p>&mdash; Prof. Barnabas Nawangwe (@ProfNawangwe) <a href="https://twitter.com/ProfNawangwe/status/970884159546720257?ref_src=twsrc%5Etfw">March 6, 2018</a></blockquote>
+  </div>  
+  </div>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.2/pusher.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<div id="snackbar">Thanks for Voting you can only vote once</div>
+<div class="card text-center">
+  <div class="card-header bg-success white " data-toggle="collapse" data-target="#demo" >
+   Copyright © Mubs i.o 2018. All right reserved.
+  </div>
+  <div id="demo" class="collapse" class="card-body">
+    <h5 class="card-title"  >License</h5>
+    <p  class="card-text">MubsPolls is open source software under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3.0 license.</a> Please see full terms in the LICENSE file.</a>
+  </div>
+  <div class="card-footer white bg-success">
+   Mubs.io
+  </div>
+  <button  onclick="topFunction()" id="myBtn" title="Go to top"><div class="triangle-up"></div></button>
+
+</div>
+
+</body>
+
+</html>
