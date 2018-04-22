@@ -5,6 +5,6 @@ const keys = require('./keys');
 mongoose.Promise = global.Promise;
 // Mongoose Connect
 mongoose
-  .connect('mongodb://brad:brad@ds249398.mlab.com:49398/mubspoll')
-  .then(() => console.log('MongoDB Connected'))
+  .connect('mongodb://<user>:<your Uri>@ds249398.mlab.com:49398/<database name>')
+  .then(() => console.log('MongoDB hiring'))
   .catch(err => console.log(err));
