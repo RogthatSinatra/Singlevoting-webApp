@@ -1,9 +1,9 @@
 {
-  "name": "MubsPollSingleVotingWebApp",
+  "name": "SingleVotingWebApp",
   "version": "18.4.0",
   "main": "app.js",
   "repository": ".git",
-  "author": "ProjectStudents <RogthatSinatra@gmail.com>",
+  "author": "Niringiye Rogers <RogthatSinatra@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "node app",
