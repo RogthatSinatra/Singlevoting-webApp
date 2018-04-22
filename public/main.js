@@ -3,12 +3,12 @@ const form = document.getElementById('vote-form');
 // Form Submit Event
 form.addEventListener('submit', e => {
   //check Local Storage to see if `hasVoted` key already stored
-  if(window.localStorage.getItem('ktlgasweirtyuiokjhyj7iu')) {
+  if(window.localStorage.getItem('hasAlreadyVoted')) {
     $('#hasVotedAlreadyErrorMsg').removeClass('hidden');
     e.preventDefault();
   } else {
     // set Local Storage to show the user has voted already
-    window.localStorage.setItem('ktlgasweirtyuiokjhyj7iu', true)
+    window.localStorage.setItem('hasAlreadyVoted', true)
 
     const choice = document.querySelector('input[name=os]:checked').value;
     const data = { os: choice };
